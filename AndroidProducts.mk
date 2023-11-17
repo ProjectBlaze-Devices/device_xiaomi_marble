@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_marble.mk
+    $(LOCAL_DIR)/aosp_marble.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_marble-eng \
-    superior_marble-userdebug \
-    superior_marble-user
+    aosp_marble-eng \
+    aosp_marble-userdebug \
+    aosp_marble-user
