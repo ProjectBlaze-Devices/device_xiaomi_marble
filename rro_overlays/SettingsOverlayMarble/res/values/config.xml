@@ -49,4 +49,9 @@
           <item>2</item>
           <item>3</item>
      </integer-array>
+
+    <!-- Battery Health -->
+    <string name="current_battery_capacity">/sys/class/power_supply/battery/charge_full</string>
+    <string name="designed_battery_capacity">/sys/class/power_supply/battery/charge_full_design</string>
+    
 </resources>
