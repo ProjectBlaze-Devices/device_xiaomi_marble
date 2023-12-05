@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_marble.mk
+    $(LOCAL_DIR)/blaze_marble.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_marble-eng \
-    aosp_marble-userdebug \
-    aosp_marble-user
+    blaze_marble-eng \
+    blaze_marble-userdebug \
+    blaze_marble-user
