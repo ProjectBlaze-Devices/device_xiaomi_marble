@@ -26,3 +26,6 @@ TARGET_GAPPS_ARCH := arm64
 
 # Project Blaze
 TARGET_SUPPORTS_BLUR := true
+
+# Gapps
+WITH_GAPPS := true
