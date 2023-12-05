@@ -29,3 +29,7 @@ TARGET_SUPPORTS_BLUR := true
 
 # Gapps
 WITH_GAPPS := true
+
+# Blaze Official
+BLAZE_BUILD_TYPE := OFFICIAL
+BLAZE_MAINTAINER := AnilShebin
