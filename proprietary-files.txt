@@ -1528,6 +1528,7 @@ vendor/etc/dolby_vision.cfg
 vendor/lib/libdeccfg.so
 vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
+vendor/etc/media_codecs_with_dolby_taro.xml
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
