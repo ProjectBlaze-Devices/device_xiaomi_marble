@@ -255,7 +255,6 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlays
 
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor \
