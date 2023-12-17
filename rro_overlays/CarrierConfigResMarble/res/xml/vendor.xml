@@ -3826,6 +3826,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="wos_flight_mode_support_bool" value="true"/>
         <boolean name="carrier_default_wfc_ims_enabled_bool" value="true"/>
     </carrier_config>
+
+    <carrier_config mcc="515" mnc="05">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
     <carrier_config mcc="515" mnc="66">
         <boolean name="hide_enhanced_4g_lte_bool" value="true"/>
         <boolean name="hide_ims_apn_bool" value="false"/>
