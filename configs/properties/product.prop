@@ -8,6 +8,12 @@ media.stagefright.audio.deep=false
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 
+# Google Photos
+debug.photos.eraser_camo=1
+debug.photos.eraser_suggestion=1
+debug.photos.force_pixel_eol=1
+debug.photos.p_editr.eraser=1
+
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
