@@ -347,6 +347,9 @@ sys.haptic.intensityforkeyboard=true
 # Incremental
 ro.incremental.enable=yes
 
+# Logs
+persist.log.tag.GoogleTagManager=S
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.stagefright.omx_default_rank=0
