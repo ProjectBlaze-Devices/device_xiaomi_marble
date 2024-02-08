@@ -26,3 +26,5 @@ get_prop(platform_app, vendor_fp_prop)
 # FPS info
 allow platform_app vendor_sysfs_graphics:dir search;
 allow platform_app vendor_sysfs_graphics:file r_file_perms;
+
+hal_client_domain(platform_app, vendor_hal_soter);
