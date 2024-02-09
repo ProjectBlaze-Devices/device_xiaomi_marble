@@ -529,7 +529,8 @@ PRODUCT_PACKAGES += \
     ueventd-odm.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh
+    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
+    $(LOCAL_PATH)/rootdir/bin/init.marble.perf.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.marble.perf.sh
 
 # Secure element
 PRODUCT_PACKAGES += \
