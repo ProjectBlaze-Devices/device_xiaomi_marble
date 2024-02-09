@@ -181,10 +181,10 @@ vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
+vendor/lib64/libmmhardware.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
-vendor/lib64/libmmhardware.so
 vendor/lib64/libresampler.so
 vendor/lib64/libsndcardparser.so
 vendor/lib64/libxlog.so
@@ -241,8 +241,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
 system/lib/libui.so:system/lib/libui_camera.so
-system/lib64/libcamera_mianode_jni.xiaomi.so
 system/lib64/libcamera_algoup_jni.xiaomi.so
+system/lib64/libcamera_mianode_jni.xiaomi.so
 system/lib64/libmicampostproc_client.so
 system/lib64/libui.so:system/lib64/libui_camera.so
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
@@ -1103,9 +1103,9 @@ vendor/etc/init/qms.rc
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
-vendor/lib64/libqms_client.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libmasc.so
+vendor/lib64/libqms_client.so
 vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
@@ -1218,6 +1218,8 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
+# Device proprietary files - from MARBLEGlobal_OS1.0.2.0.UMRMIXM package, unless pinned
+
 # Diag
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
@@ -1232,6 +1234,7 @@ vendor/etc/init/feature_enabler_client.rc|6aeee1f0dc59f7e2841b8613e52a1ff81e0a9c
 vendor/lib64/libdisplaydebug.so
 
 # Displaycomposer
+system/lib64/android.hardware.common-V2-ndk_platform.so:vendor/lib64/android.hardware.common-V2-ndk_platform.so
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/init.qti.display_boot.sh
@@ -1315,7 +1318,6 @@ vendor/lib64/libqservice.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libwfddisplayconfig_vendor.so
-system/lib64/android.hardware.common-V2-ndk_platform.so:vendor/lib64/android.hardware.common-V2-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
 
 # Display configs
@@ -1428,6 +1430,9 @@ vendor/lib64/vendor.display.color@1.6.so
 vendor/lib64/vendor.display.color@1.7.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
+# Display (SDM)
+vendor/lib64/libsdedrm.so
+
 # Display SDM
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
@@ -1461,9 +1466,6 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 
-# Display (SDM)
-vendor/lib64/libsdedrm.so
-
 # Dolby Atmos
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
@@ -1476,29 +1478,14 @@ vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
-# Media (Dolby C2 Audio) - from fuxi
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service|4a88666d7f072ce6ba4147198fe3aee1eebf1481
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc|97f1f3d6dd7bcd52a66257468559b66b60f32541
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
-vendor/lib64/libcodec2_soft_ac4dec.so|3d4eeff8683054781b8c2f8c41dc3940fa17ff94
-vendor/lib64/libcodec2_soft_ddpdec.so|50a9d5bd899bd4dba9af3bd7ef04f42a813be38a
-vendor/lib64/libcodec2_store_dolby.so|3749d05dc119cd7c06d536cafbe7a79101386bec
-vendor/lib64/libdeccfg.so|53080fed62ca29c2609070c0850a1e711e5c89ac
-vendor/lib64/libdapparamstorage.so|b0e7759c09b120e5aefbe9a2850b61db87ec7c80
-vendor/lib64/libspatializerparamstorage.so|ae237b5d7d9fda0fccbc168dc01cf868e3f336c4
-vendor/lib64/libdlbpreg.so|49d9fe0ff22a8a7feaca5d5996e19a112517533e
-vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
-vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b
-vendor/lib64/soundfx/libswgamedap.so|517df6aa1b233ad943632b072c5c63ea7925ca54
-vendor/lib64/soundfx/libswspatializer.so|97203e8c0b44199af856f5564a4079aef3aa36d0
-vendor/lib64/soundfx/libswvqe.so|901794e42022ffc258b18b0c1226a179f904d0bf
-
 # Dolby vision
 system/lib64/libdolbyottcontrol.so
 system/lib64/libdovi_omx.so
 vendor/bin/hw/dolbycodec2
 vendor/etc/dolby_vision.cfg
 vendor/etc/media_codecs_with_dolby_taro.xml
+vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0.stock.so
+vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.stock.so
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
@@ -1509,8 +1496,6 @@ vendor/lib64/c2.dolby.hevc.sec.dec.so
 vendor/lib64/c2.dolby.store.so
 vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyvision.so
-vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0.stock.so
-vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.stock.so
 
 # DPM
 system_ext/bin/dpmd
@@ -1551,13 +1536,13 @@ vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecom_sample_client
 vendor/bin/qseecomd
+vendor/bin/qwes_cli
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/bin/qwes_cli
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
@@ -1601,23 +1586,23 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint
+odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 vendor/bin/hw/mfp-daemon
+vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
 vendor/etc/init/init.mfp-daemon.rc
+vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 vendor/etc/vintf/manifest/AHBF@2.1-service.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
 vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/hw/fingerprint.fpc.so
 vendor/lib64/hw/fingerprint.goodix.so
+vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so|a516bcfbd27273d05e1d1f36e02cc3375efd706c
-odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
-vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
-vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
-vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 
 # FM
 vendor/etc/init.qti.fm.sh
@@ -1714,6 +1699,31 @@ vendor/lib64/libxtwifi_server_protocol_uri_v3.so
 vendor/lib64/vendor.qti.gnss-V3-ndk_platform.so
 vendor/lib64/vendor.qti.gnss-service.so
 
+# Graphics
+vendor/gpu/kbc/sequence_manifest.bin
+vendor/gpu/kbc/unified_kbcs_32.bin
+vendor/gpu/kbc/unified_kbcs_64.bin
+vendor/gpu/kbc/unified_ksqs.bin
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgsl.so
+vendor/lib64/libkcl.so
+vendor/lib64/libkernelmanager.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
+vendor/lib64/libllvm-qgl.so
+
 # Graphics (Adreno firmware)
 vendor/firmware/a610_zap.b00
 vendor/firmware/a610_zap.b01
@@ -1744,31 +1754,6 @@ vendor/firmware/a730_zap.elf
 vendor/firmware/a730_zap.mbn
 vendor/firmware/a730_zap.mdt
 vendor/firmware/gmu_gen70000.bin
-
-# Graphics
-vendor/gpu/kbc/sequence_manifest.bin
-vendor/gpu/kbc/unified_kbcs_32.bin
-vendor/gpu/kbc/unified_kbcs_64.bin
-vendor/gpu/kbc/unified_ksqs.bin
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.adreno.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libkcl.so
-vendor/lib64/libkernelmanager.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
 
 # Hotword Enrollment
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
@@ -1942,10 +1927,27 @@ vendor/lib64/libqcodec2_mockqc2filter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
-vendor/lib64/libstagefrighthw.so
 vendor/lib64/libstagefright_softomx.so
+vendor/lib64/libstagefrighthw.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
+
+# Media (Dolby C2 Audio) - from fuxi
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|4a88666d7f072ce6ba4147198fe3aee1eebf1481
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc|97f1f3d6dd7bcd52a66257468559b66b60f32541
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
+vendor/lib64/libcodec2_soft_ac4dec.so|3d4eeff8683054781b8c2f8c41dc3940fa17ff94
+vendor/lib64/libcodec2_soft_ddpdec.so|50a9d5bd899bd4dba9af3bd7ef04f42a813be38a
+vendor/lib64/libcodec2_store_dolby.so|3749d05dc119cd7c06d536cafbe7a79101386bec
+vendor/lib64/libdapparamstorage.so|b0e7759c09b120e5aefbe9a2850b61db87ec7c80
+vendor/lib64/libdeccfg.so|53080fed62ca29c2609070c0850a1e711e5c89ac
+vendor/lib64/libdlbpreg.so|49d9fe0ff22a8a7feaca5d5996e19a112517533e
+vendor/lib64/libspatializerparamstorage.so|ae237b5d7d9fda0fccbc168dc01cf868e3f336c4
+vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
+vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b
+vendor/lib64/soundfx/libswgamedap.so|517df6aa1b233ad943632b072c5c63ea7925ca54
+vendor/lib64/soundfx/libswspatializer.so|97203e8c0b44199af856f5564a4079aef3aa36d0
+vendor/lib64/soundfx/libswvqe.so|901794e42022ffc258b18b0c1226a179f904d0bf
 
 # Mlipay
 vendor/bin/fidoca
@@ -2044,14 +2046,14 @@ vendor/etc/perf/thermal-boost.conf
 vendor/etc/perf/thermalbreakboostconfig.xml
 
 # Perf (system) - from LA.QSSI.14.0.r1
-system_ext/app/PerformanceMode/PerformanceMode.apk|353349549bf1c86feb12972d152750eb65d07e6d
-system_ext/app/PowerSaveMode/PowerSaveMode.apk|acf99f8780f4aca76f3d026b80f67bcfe0a3d0c7
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
 system/framework/QPerformance.jar|3d7ca2740a8f33e174a15405b335b5757a762a09
 system/framework/QXPerformance.jar|59974549e5444f9b19561fd4307a57938ab696ed
 system/framework/UxPerformance.jar|960c556e58a7e4e04303175354aa1058d14b8c8b
 system/lib64/vendor.qti.hardware.perf2-V1-ndk.so|d85286acecee8e2081ac066dc767421ffe648d29
+system_ext/app/PerformanceMode/PerformanceMode.apk|353349549bf1c86feb12972d152750eb65d07e6d
+system_ext/app/PowerSaveMode/PowerSaveMode.apk|acf99f8780f4aca76f3d026b80f67bcfe0a3d0c7
 system_ext/bin/perfservice|ee3aa094acc3a27b10a52a8c985edd8535d235a2
 system_ext/bin/qspmsvc|aa040e405067e842fdd3901b395fba0a996641ab
 system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
@@ -2102,7 +2104,6 @@ system_ext/lib64/vendor.qti.hardware.perf@2.2.so|1d1b56ada415c5a7fe8b9d834551326
 system_ext/lib64/vendor.qti.hardware.perf@2.3.so|e2226cc181265426a779b8f030bf9c964beb54dc
 system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so|b59800aaae7bcae40ee0911516397568d205bc5f
 system_ext/lib64/vendor.qti.qspmhal@1.0.so|d6a85a1a67b26ef6147f14e1a1a8100d21eeae18
-
 
 # Perf (vendor) - from Pong
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|257c7d60baa0b2334645ef20c90a1b8b11842945
