@@ -8,9 +8,6 @@ persist.vendor.bt.a2dp.hal.implementation=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.lpa=true
 
-# Blur
-ro.surface_flinger.supports_background_blur=0
-
 # Charger
 ro.charger.enable_suspend=1
 
@@ -25,11 +22,6 @@ persist.debug.ftrace_events_disable=Yes
 
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
-renderthread.skia.reduceopstasksplitting=true
-
-# Display
-hwui.disable_vsync=true
-hwui.render_dirty_regions=false
 
 # FEAS
 ro.feas.enable=true
@@ -122,6 +114,7 @@ ro.nfc.port=I2C
 # Turn off vertical sync (V-Sync)
 debug.hwui.disable_vsync=true
 persist.sys.ui.hw=1
+hwui.render_dirty_regions=false
 
 # WiFi display
 persist.debug.wfd.enable=1
