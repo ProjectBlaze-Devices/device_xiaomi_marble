@@ -5,8 +5,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Battery Health -->
-    <string name="config_batteryRemainingCapacityNode">/sys/class/power_supply/battery/charge_full</string>
-    <string name="config_batteryDesignCapacityNode">/sys/class/power_supply/battery/charge_full_design</string>
+    <bool name="config_supportBatteryHealth">true</bool>
+    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/battery/charge_full</string>
+    <string name="config_batteryDesignCapacity">/sys/class/power_supply/battery/charge_full_design</string>
     <string name="config_batteryChargeCycles">/sys/class/power_supply/battery/cycle_count</string>
 
     <!-- Whether device supports increased touch sensitvity -->
