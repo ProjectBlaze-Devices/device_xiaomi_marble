@@ -35,6 +35,7 @@ import android.util.Log;
 public class ThermalService extends Service {
 
     private static final String TAG = "ThermalService";
+    private static final boolean DEBUG = false;
 
     private boolean mScreenOn = true;
     private String mCurrentApp = "";
@@ -60,7 +61,7 @@ public class ThermalService extends Service {
 
     @Override
     public void onCreate() {
-        dlog("Creating service");
+        if (DEBUG) Log.d(TAG, "Creating service");
         try {
             mActivityTaskManager = ActivityTaskManager.getService();
             mActivityTaskManager.registerTaskStackListener(mTaskListener);
@@ -74,7 +75,7 @@ public class ThermalService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        dlog("Starting service");
+        if (DEBUG) Log.d(TAG, "Starting service");
         return START_STICKY;
     }
 
@@ -115,10 +116,4 @@ public class ThermalService extends Service {
             } catch (Exception e) {}
         }
     };
-
-    private static void dlog(String msg) {
-        if (Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, msg);
-        }
-    }
 }

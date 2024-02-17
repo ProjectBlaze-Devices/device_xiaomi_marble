@@ -18,13 +18,13 @@ public class TfWrapper {
     private static ITouchFeature mTouchFeature;
 
     private static DeathRecipient mDeathRecipient = (cookie) -> {
-        dlog("serviceDied");
+        Log.d(TAG, "serviceDied");
         mTouchFeature = null;
     };
 
     public static ITouchFeature getITouchFeature() {
         if (mTouchFeature == null) {
-            dlog("getITouchFeature: mTouchFeature=null");
+            Log.d(TAG, "getITouchFeature: mTouchFeature=null");
             try {
                 mTouchFeature = ITouchFeature.getService();
                 mTouchFeature.asBinder().linkToDeath(mDeathRecipient, 0);
@@ -41,17 +41,11 @@ public class TfWrapper {
             Log.e(TAG, "setModeValue: touchFeature is null!");
             return;
         }
-        dlog("set mode=" + mode + " value=" + value);
+        Log.d(TAG, "set mode=" + mode + " value=" + value);
         try {
             touchFeature.setModeValue(0, mode, value);
         } catch (Exception e) {
             Log.e(TAG, "setModeValue failed!", e);
-        }
-    }
-
-    private static void dlog(String msg) {
-        if (Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, msg);
         }
     }
 

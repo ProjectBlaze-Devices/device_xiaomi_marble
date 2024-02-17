@@ -27,6 +27,7 @@ import org.lineageos.settings.display.DfWrapper;
 public class AodBrightnessService extends Service {
 
     private static final String TAG = "AodBrightnessService";
+    private static final boolean DEBUG = true;
 
     private static final int SENSOR_TYPE_AOD = 33171029; // xiaomi.sensor.aod
     private static final float AOD_SENSOR_EVENT_BRIGHT = 4f;
@@ -157,8 +158,6 @@ public class AodBrightnessService extends Service {
     }
 
     private static void dlog(String msg) {
-        if (Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, msg);
-        }
+        if (DEBUG) Log.d(TAG, msg);
     }
 }
