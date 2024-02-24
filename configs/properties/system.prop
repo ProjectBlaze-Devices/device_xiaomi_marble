@@ -8,6 +8,9 @@ persist.vendor.bt.a2dp.hal.implementation=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.lpa=true
 
+# Brightness Curve
+persist.sys.brightness.low.gamma=true
+
 # Charger
 ro.charger.enable_suspend=1
 
